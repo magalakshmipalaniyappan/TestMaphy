@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>
+        How to rotate an HTML div element
+        90 degrees using JavaScript ?
+    </title>
+      
+    <style>
+        .box {
+            height: 250px;
+            width: 150px;
+            border-right: 5px solid;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+  
+<body>
+    <h1 style="color: green">
+        GeeksforGeeks
+    </h1>
+      
+    <b>
+        How to rotate an HTML div
+        element in 90 degrees?
+    </b>
+      
+    <p>
+        Click on the button below to rotate
+        the element by 90 degress.
+    </p>
+      
+    <div class="box"></div>
+      
+    <button onclick="rotateElem()">
+        Rotate by 90 degrees
+    </button>
+      
+    <script type="text/javascript">
+        function rotateElem() {
+            document.querySelector('.box').style.transform
+                       = 'rotate(90deg)';
+        }
+    </script>
+</body>
+  
+</html>

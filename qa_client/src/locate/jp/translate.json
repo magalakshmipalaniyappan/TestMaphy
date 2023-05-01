@@ -1,0 +1,315 @@
+{
+    "translations": {
+        "paragraph": "段落",
+        "author": {
+            "title": "著者名",
+            "value": "タリクル"
+        },
+        "login": {
+            "email": "Eメール",
+            "password": "パスワード"
+        },
+"AssetsListall": {
+            "company_id": "会社",
+            "asset_tag": "アセットタグ",
+            "serial": "シリアル",
+             "model_id": "モデル",
+            "status_id": "状態",
+            "AssetName": "アセット名",
+            "purchase_date": "購入日",
+            "supplier_id": "ベンダー",
+             "order_number": "注文番号",
+            "purchase_cost": "購入費用",
+             "warranty_months": "保証月",
+            "notes": "ノート",
+             "location_id": "ロケーション"
+ },
+         "Checkout": {
+            "model_id": "モデル",
+            "name": "アセット名",
+            "status_id": "ステータスラベルタイプ",
+          "checkout_to_type": "チェックアウト先",
+          "checkout_at": "チェックアウト日",
+             "expected_checkin": "チェックイン予定日",
+              "notes": "ノート"
+        },
+        "Checkin": {
+            "model_id": "モデル",
+            "name": "アセット名",
+            "status_id": "ステータスラベルタイプ",
+          "checkout_to_type": "チェックアウト先",
+      "expected_checkin": "チェックインする日",
+              "notes": "ノート"
+        },
+        "AssetMaintenance": {
+         "name": "資産",
+            "supplier_id": "ベンダー",
+          "asset_maintenance_type": "資産保守タイプ",
+             "title": "題名",
+              "start_date": "開始日",
+                "completion_date": "完了日",
+                "is_warranty":"保証月",
+                  "cost": "費用",
+                   "notes": "ノート"
+        },
+        "BulkCheckout": {
+         "assigned_user": "チェックアウト先",
+            "checkout_date": "チェックアウト日",
+          "expected_checkin_date": "チェックイン予定日",
+               "notes": "ノート",
+             "selected_assets": "資産"
+         },
+         "company": {
+            "name": "会社のブランド",
+              "createcompany":"会社を作る",
+               "back":"戻る",
+                 "submit":"送信",
+                 "btnCancel":"キャンセル",
+                  "companytitle":"企業",
+                  "createnew":"新しく作る"
+
+     },
+        "category": {
+            "name": "会社名",
+            "category_type": "カテゴリタイプ",
+            "has_eula": "カテゴリEULA",
+            "submit":"参加する",
+          "btnCancel": "キャンセル",
+          "back":"戻る",
+          "categoriestitle":"カテゴリを作成する",
+          "Accessory":"付属品",
+           "License":"ライセンス",
+         "Consumable":"消耗品",
+         "Component":"コンポーネント",
+          "Asset":"資産",
+           "createnew":"新しく作る",
+            "categories":"カテゴリ",
+              "edit":"編集",
+              "actions":"行動",
+               "btnCreate":"カテゴリ作成",
+                "btnUpdate":"カテゴリの更新"
+          
+        },
+         "manufacturers": {
+            "name": "製造業者名",
+            "url": "URL",
+            "support_url": "URLをサポート",
+           "support_phone": "サポート電話",
+            "support_email": "サポートメール",
+             "createmanufacture":"製造を作成する",
+            "back":"戻る",
+            "submit":"参加する",
+            "btnCancel":"キャンセル",
+             "manufacture":"メーカー",
+            "showdeleted":"削除されたショー",
+            "createnew":"新しく作る",
+             "actions":"行動",
+            "btnCreate":"メーカー作成",
+            "btnUpdate":"メーカーアップデート"
+     },
+         "departments": {
+            "name": "部署名",
+            "company_id": "会社名",
+            "manager_id": "マネージャー名",
+           "location_id": "場所の名前",
+            "createdept":"部門を作成する",
+    "createlocation":"場所を作成する",
+      "location":"場所の名前",
+       "city":"市",
+           "country":"国",
+            "departments":"部門"
+          
+        },
+        "Registration": {
+            "name": "会社名",
+            "username": "Eメール",
+            "password": "パスワード",
+            "first_name": "ファーストネーム",
+            "last_name": "苗字",
+            "mobile_no": "携帯電話番号"
+
+        },
+        "people": {
+            "first_name": "ファーストネーム",
+            "last_name": "苗字",
+            "username": "ユーザー名",
+            "password": "パスワード",
+            "password_confirmation": "パスワードの確認",
+            "email": "Eメール",
+            "company_id": "会社",
+            "employee_num": "従業員番号",
+            "jobtitle": "題名",
+            "manager_id": "マネージャー",
+            "department_id": "部門",
+            "location_id": "ロケーション",
+            "phone": "電話",
+            "website": "ウェブサイト",
+            "address": "住所",
+            "city": "市",
+            "state": "状態",
+            "country": "国",
+            "zip": "ジップ",
+            "notes": "ノート",
+            "group_id": "グループ",
+            "talent_group_id":"才能 グループ",
+            "user_type":"ユーザータイプ"
+
+        },
+        "component": {
+            "name": "コンポーネント名",
+            "category_id": "カテゴリー",
+            "qty": "量",
+            "min_amt": "最小数量",
+            "serial": "シリアル",
+            "company_id": "会社",
+            "location_id": "ロケーション",
+            "order_number": "注文番号",
+            "purchase_date": "購入日",
+            "purchase_cost": "購入費用"
+    },
+        "consumable": {
+            "company_id": "会社",
+            "name": "消耗品名",
+            "category_id": "カテゴリー",
+            "manufacturer_id": "メーカー",
+            "location_id": "ロケーション",
+            "serial": "シリアル",
+            "model_number": "モデル番号",
+            "item_no": "商品番号",
+            "order_number": "注文番号",
+            "purchase_date": "購入日",
+            "purchase_cost": "購入費用",
+            "qty": "量",
+            "min_amt": "最小数量"
+        },
+        "accessory": {
+            "company_id": "会社",
+            "name": "付属品名",
+            "category_id": "カテゴリー",
+            "supplier_id": "ベンダー",
+            "manufacturer_id": "メーカー",
+            "location_id": "ロケーション",
+            "qty": "量",
+            "min_amt": "最小数量",
+            "serial": "シリアル",
+            "model_number": "モデル番号",
+            "order_number": "注文番号",
+            "purchase_date": "購入日",
+            "purchase_cost": "購入費用"
+         
+        },
+        "license": {
+        "name": "ソフトウェア名",
+            "category_id": "カテゴリー",
+            "serial": "プロダクトキー",
+            "seats": "座席",
+            "company_id": "会社",
+            "manufacturer_id": "メーカー",
+            "license_name": "名前のライセンス",
+            "license_email": "電子メールのライセンス",
+            "supplier_id": "ベンダー",
+            "order_number": "注文番号",
+            "purchase_date": "購入日",
+            "purchase_cost": "購入費用",
+            "termination_date": "リニューアル",
+            "expiration_date": "有効期限",
+            "purchase_order": "注文書",       "notes": "ノート "           
+        },
+        "statuslabel": {
+        "name": "ステータスラベル名",
+            "type": "ステータスラベルタイプ",
+            "notes": "ノート"            
+        },
+        "location": {
+        "name": "場所の名前",
+            "parent_id": "親",
+            "manager_id": "マネージャー",
+            "currency": "通貨",
+            "address": "住所",
+            "city": "市",
+            "state": "状態",
+            "country": "国",
+            "zip": "ジップ"                    }, 
+        "supplier": {
+           
+            "name": "業者名",
+            "phone": "電話",
+            "fax": "ファックス",
+            "contact": "連絡先",
+            "email": "Eメール",
+            "url": "URL",
+            "notes": "ノート",
+            "address": "住所",
+            "city": "市",
+            "state": "状態",
+            "country": "国",
+            "zip": "ジップ"                   
+        },
+        "assetmodel": {
+        "name": "資産モデル名",
+            "manufacturer_id": "メーカー",
+            "category_id": "カテゴリー",
+            "model_number": "モデル番号",
+            "eol": "EOL",
+            "depreciation_id": "減価償却",
+            "notes": "ノート"
+         },
+        "depreciation": {
+        "name": "減価償却名",
+            "months": "減価償却月",
+            "depreciationtitle":"減価償却",
+             "createdepreciation":"減価償却を作成する"
+    },
+        "ticket":{
+            "asset_tag": "アセットタグ",
+           "description": "説明",
+           "details": "詳細",
+            "status_id": "状態",
+            "issue_id":"チケット発行"
+        },
+        "changepassword": {
+        "currentpassword": "現在のパスワード",
+            "newpassword": "新しいパスワード",
+             "confirmpassword": "パスワードを認証する"
+                
+        },
+          "workstatus": {
+        "firsthalf_status": "前半の状況",
+            "secondhalf_status": "後半の状況"
+          
+        },
+        "labels": {
+        "labels_per_page": "ページあたりのラベル",
+            "labels_fontsize": "ラベルのフォントサイズ",
+             "labels_width": "ラベルの幅",
+           "labels_display_sgutter": "ラベル間隔（インチ）",
+              "labels_pmargin_top": "ページ余白（インチ）",
+              "labels_pagewidth": "ページの寸法（インチ）"
+            
+        },
+          "workstatus":{
+            "fromTime":"時間から",
+            "toTime":"時間に",
+            "task":"題名",
+            "taskDescription":"説明"
+        },
+        "button":{
+            "create":"新しく作る",
+            "edit":"編集",
+            "delete":"消去",
+            "clone":" クローン",
+            "actions":"行動",
+            "print":"印刷",
+            "status":" 状態",
+            "reopen":"再開する",
+            "back":"戻る",
+            "submit":"送信",
+                "btnCancel":"キャンセル",
+                "new":"新しい",
+                "save":"保存する",
+                "cancel":"キャンセル" ,
+                 "updatedept":"更新部門"
+           
+    }
+}
+}
