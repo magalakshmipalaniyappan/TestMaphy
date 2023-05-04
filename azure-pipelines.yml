@@ -1,0 +1,28 @@
+# Starter pipeline
+- task: FortifyScanCentralSAST@7
+  inputs:
+    scanCentralClientToken: '$(ScanCentral.ClientToken)'
+    sscUrl: 'http://192.168.68.125:8180/ssc/'
+    sscCiToken: '$(ScanCentral.SscCiToken)'
+    uploadToSSC: true
+    applicationName: 'java'
+    applicationVersion: '2.0'
+    buildTool: 'mvn'
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
