@@ -35,7 +35,7 @@ steps:
       
       Write-Host "Downloading SCA from SSC"
       $BaseUrl = "http://192.168.68.125:8180/ssc/downloads"
-      New-Item -ItemType directory -Path c:\
+      New-Item -ItemType directory -Path c:\_agent_distr
       $url = "$BaseUrl/Fortify_SCA_and_Apps_22.1.0_windows_x64.exe"
       Write-Host $url
       $output = "C:\Fortify_SCA_and_Apps_22.1.1_windows_x64.exe"
