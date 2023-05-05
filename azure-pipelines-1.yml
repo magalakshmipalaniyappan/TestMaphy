@@ -1,0 +1,77 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      Write-Host "DevOps VM IP:"
+      Invoke-RestMethod http://ipinfo.io/json | Select -exp ip
+      
+      Write-Host "Modify Hosts File:"
+      $file = "$env:windir\System32\drivers\etc\hosts"
+      "http://192.168.68.125:8180/ssc" | Add-Content -PassThru $file
+      Get-Content -Path $file
+      gc C:\Windows\System32\drivers\etc\hosts | write-host
+      
+      Write-Host "Downloading SCA from SSC"
+      $BaseUrl = "http://192.168.68.125:8180/ssc/downloads"
+      New-Item -ItemType directory -Path c:\_agent_distr
+      $url = "$BaseUrl/Fortify_SCA_and_Apps_22.1.0_windows_x64.exe"
+      Write-Host $url
+      $output = "c:\_agent_distr\Fortify_SCA_and_Apps_22.1.0_windows_x64.exe"
+      $wc = New-Object System.Net.WebClient
+      $wc.DownloadFile($url, $output)
+      
+      Write-Host "Downloading fortify.license from SSC"
+      $url = "$BaseUrl/fortify.license"
+      $output = "c:\_agent_distr\fortify.license"
+      Write-Host $url
+      $wc = New-Object System.Net.WebClient
+      $wc.DownloadFile($url, $output)
+      Write-Host "===Downloading Completed==="
+      enabled: true
+      - task: InstallFortifySCA@7
+        inputs:
+          InstallerPath: 'C:\Fortify_SCA_and_Apps_22.1.1_windows_x64.exe'
+          VS2022: true
+          LicenseFile: 'C:\Fortify\fortify.license'
+          RunFortifyRulepackUpdate: true
+          - task: PowerShell@2
+            inputs:
+              targetType: 'inline'
+              script: |
+                # Write your PowerShell commands here.
+                
+                Write-Host "Post SCA Install Script"
+                Write-Host "##vso[task.prependpath]C:\Fortify\bin\"
+                Write-Host "##vso[task.prependpath]C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin"
+- task: FortifySCA@7
+  inputs:
+    applicationType: 'dotnet'
+    fortifyProjects: '**\*.sln'
+    fortifyBuildId: 'maphy'
+    scaVerbose: true
+    scaDebug: true
+    fortifyScanType: 'LocalScan'
+    runFortifyUpload: true
+    fortifyServerName: 'SSC'
+    fortifyApplicationName: 'maphy'
+    fortifyApplicationVersion: '2.0'
