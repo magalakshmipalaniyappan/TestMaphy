@@ -51,7 +51,7 @@ steps:
       Write-Host "===Downloading Completed==="
       enabled: true
 
-      - task: InstallFortifySCA@7
+      - task: InstallFortifySCA@8.10.3
         inputs:
           InstallerPath: 'C:\Fortify_SCA_and_Apps_22.1.1_windows_x64.exe'
           VS2022: true
@@ -68,7 +68,7 @@ steps:
                 Write-Host "##vso[task.prependpath]C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin"
                 enabled: true
 
-- task: FortifySCA@7
+- task: FortifySCA@8.10.3
   inputs:
     applicationType: 'dotnet'
     fortifyProjects: '**\*.sln'
