@@ -17,6 +17,8 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
@@ -48,22 +50,24 @@ steps:
       $wc.DownloadFile($url, $output)
       Write-Host "===Downloading Completed==="
       enabled: true
+
       - task: InstallFortifySCA@7
         inputs:
           InstallerPath: 'C:\Fortify_SCA_and_Apps_22.1.1_windows_x64.exe'
           VS2022: true
           LicenseFile: 'C:\Fortify\fortify.license'
           RunFortifyRulepackUpdate: true
+
           - task: PowerShell@2
             inputs:
               targetType: 'inline'
               script: |
                 # Write your PowerShell commands here.
-                
                 Write-Host "Post SCA Install Script"
                 Write-Host "##vso[task.prependpath]C:\Fortify\bin\"
                 Write-Host "##vso[task.prependpath]C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin"
                 enabled: true
+
 - task: FortifySCA@7
   inputs:
     applicationType: 'dotnet'
